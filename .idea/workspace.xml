@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44703a83-3af2-4626-b42c-1d72f2da5d24" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change beforePath="$PROJECT_DIR$/report.php" afterPath="$PROJECT_DIR$/report.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,51 +13,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="report.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/report.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="127">
-                  <caret line="40" column="85" lean-forward="false" selection-start-line="40" selection-start-column="85" selection-end-line="40" selection-end-column="85" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="HTML Fragment (report.php:1170).html" pinned="false" current-in-tab="true">
-            <entry file="mock:///HTML Fragment (report.php:1170).html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="87" lean-forward="false" selection-start-line="0" selection-start-column="87" selection-end-line="0" selection-end-column="87" />
-                  <folding>
-                    <marker date="0" expanded="false" signature="43:60" ph="$first_name" />
-                    <marker date="0" expanded="false" signature="62:79" ph="$error_fname" />
-                    <marker date="0" expanded="false" signature="90:107" ph="$last_name" />
-                    <marker date="0" expanded="false" signature="109:126" ph="$error_lname" />
-                    <marker date="0" expanded="false" signature="174:191" ph="$when_happen" />
-                    <marker date="0" expanded="false" signature="224:241" ph="$how_long" />
-                    <marker date="0" expanded="false" signature="288:305" ph="$how_many" />
-                    <marker date="0" expanded="false" signature="348:365" ph="$what_do" />
-                    <marker date="0" expanded="false" signature="413:430" ph="$describe" />
-                    <marker date="0" expanded="false" signature="491:508" ph="$seen_fluffy" />
-                    <marker date="0" expanded="false" signature="510:527" ph="$error_fluffy" />
-                    <marker date="0" expanded="false" signature="579:596" ph="$comments" />
-                    <marker date="0" expanded="false" signature="645:662" ph="$email" />
-                    <marker date="0" expanded="false" signature="664:681" ph="$error_email" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="report.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/report.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="38" column="85" lean-forward="false" selection-start-line="38" selection-start-column="85" selection-end-line="38" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,6 +43,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/report.php" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -141,12 +120,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519247115024</updated>
-      <workItem from="1519247116399" duration="1347000" />
+      <workItem from="1519247116399" duration="1650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1347000" />
+    <option name="totallyTimeSpent" value="1650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="127" y="48" width="1204" height="757" extended-state="0" />
@@ -185,8 +164,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/report.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="40" column="85" lean-forward="false" selection-start-line="40" selection-start-column="85" selection-end-line="40" selection-end-column="85" />
+        <state relative-caret-position="470">
+          <caret line="38" column="85" lean-forward="false" selection-start-line="38" selection-start-column="85" selection-end-line="38" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
         </state>
       </provider>

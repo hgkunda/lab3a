@@ -57,19 +57,19 @@
     <h3>Share your story of alien abduction:</h3>
 
     <label for="first_name">*First Name:</label>
-    <input type="text" name="first_name" id="first_name" value="first name" size="20">
+    <input type="text" name="first_name" id="first_name" size="20" value="<?php echo $first_name; ?>">
 
 
     <label for="last_name">*Last Name:</label>
-    <input type="text" name="last_name" id="last_name" value="last name" size="20">
+    <input type="text" name="last_name" id="last_name" size="20" value="<?php echo $last_name; ?>">
 
 
     <label for="email">*What is your email address?</label>
-    <input type="email" name="email" id="email" value="email" size="20">
+    <input type="email" name="email" id="email" size="20"value="<?php echo $email; ?>">
 
 
     <label for="when_happen">When did it happen?</label>
-    <input type="date" name="when_happen" id="when_happen" size="20">
+    <input type="date" name="when_happen" id="when_happen" size="20" value="<?php echo $when_happen; ?>">
 
 
     <label for="how_long">How long were you gone?</label>
@@ -119,3 +119,8 @@
 </body>
 
 </html>
+
+
+<!-- input type="radio" name="gallon_price" value="3.00" <?php if (isset($_POST['gallon_price']) && ($_POST['gallon_price'] == '3.00')) echo 'checked="checked" '; ?>> 3.00
+		<input type="radio" name="gallon_price" value="3.50" <?php if (isset($_POST['gallon_price']) && ($_POST['gallon_price'] == '3.50')) echo 'checked="checked" '; ?>> 3.50
+		<input type="radio" name="gallon_price" value="4. -->
