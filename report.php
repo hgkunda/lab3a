@@ -25,47 +25,23 @@
 if ($SERVER['REQUEST_METHOD'] == POST) {
 
     if (!$first_name) {
-        echo "You must enter a vaild first name."; {
-          else {
-            echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
+        $error_fname = "You must enter a vaild first name."; {
 
-          }
-        }
     }
     if (!$last_name) {
-        echo "You must enter a valid last name.";
-        else {
-          echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
-        }
-        }
+        $error_lname = "You must enter a valid last name.";
     }
     if (!$email) {
-        echo "You must enter a valid email address.";
-        else {
-          echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
-        }
+        $error_email = "You must enter a valid email address.";
     }
     if (!$seen_fluffy) {
-        echo "Please let us know if you have seen our dear little Fluffy (we really miss him)!";
-    }
-    else {
-      echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
+        $error_fluffy = "Please let us know if you have seen our dear little Fluffy (we really miss him)!";
     }
 
     echo "<p>There was an error with your form.\n$error_fname \n$error_lname \n$error_email \n$error_fluffy";
-
-
-        // echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
-
 }
 
-
-      // $to = 'hkunda@mail.dccc.edu';
-      // $subject = 'Alien Abduction Report Submission';
-      // $body = "The following is an alien abduction form submission from $first_name $last_name: \n\n First name: $first_name \n Last name: $last_name \n Email: $email. \n Abducted on: $when_happen. \n Time gone for: $how_long. \n Number of aliens: $how_many. \n What the aliens did: $what_do. \n Description of aliens: $describe. \n Did they see Fluffy? $seen_fluffy. \n Other comments: $comments.";
-      //
-      //   mail($to, $subject, $body);
-
+        echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
 
 
 ?>
