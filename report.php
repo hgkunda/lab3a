@@ -25,22 +25,37 @@
 if ($SERVER['REQUEST_METHOD'] == POST) {
 
     if (!$first_name) {
-        $error_fname = "You must enter a vaild first name.";
+        echo "You must enter a vaild first name."; {
+          else {
+            echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
+
+          }
+        }
     }
     if (!$last_name) {
-        $error_lname = "You must enter a valid last name.";
+        echo "You must enter a valid last name.";
+        else {
+          echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
+        }
+        }
     }
     if (!$email) {
-        $error_email = "You must enter a valid email address.";
+        echo "You must enter a valid email address.";
+        else {
+          echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
+        }
     }
     if (!$seen_fluffy) {
-        $error_fluffy = "Please let us know if you have seen our dear little Fluffy (we really miss him)!";
+        echo "Please let us know if you have seen our dear little Fluffy (we really miss him)!";
+    }
+    else {
+      echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
     }
 
     echo "<p>There was an error with your form.\n$error_fname \n$error_lname \n$error_email \n$error_fluffy";
-}
-else {
-        echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
+
+
+        // echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
 
 }
 
