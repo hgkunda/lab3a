@@ -43,7 +43,6 @@ if ($SERVER['REQUEST_METHOD'] == POST) {
 
         echo "<p>Thanks for submitting the form <strong>$first_name <?nbsp> $last_name</strong>.</p><p>You were abducted on <strong>$when_happen</strong> and gone for <strong>$how_long</strong>.</p><p>You said there were <strong>$how_many</strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong>$describe</strong>.</p><p>Did you see Fluffy? You answered: <strong>$seen_fluffy</strong></p><p>Your other comments were: <strong>$comments</strong></p><p>We will contact you at <strong>$email</strong> if we have any relevant news.</p>";
 
-
 ?>
 
 
