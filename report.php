@@ -45,11 +45,12 @@ if ($SERVER['REQUEST_METHOD'] == POST) {
 
     <p>Thanks for submitting the form <strong><?php echo $first_name, $error_fname ?><nbsp><?php echo $last_name, $error_lname ?></strong>.</p>
     <p>You were abducted on <strong><?php echo $when_happen ?></strong> and gone for <strong><?php echo $how_long ?></strong>.</p>
-    <p>You said there were <strong><?php echo?></strong> of them. ?></p><p>And they <strong><?php echo $what_do ?></strong>.</p>
+    <p>You said there were <strong><?php echo $how_many ?></strong> of them.</p>
+    <p>And they <strong><?php echo $what_do ?></strong>.</p>
     <p>You described them as <strong><?php echo $describe ?></strong>.</p>
-    <p>Did you see Fluffy? You answered: <strong><?php echo $seen_fluffy ?></strong></p>
+    <p>Did you see Fluffy? You answered: <strong><?php echo $seen_fluffy, $error_fluffy ?></strong>
     <p>Your other comments were: <strong><?php echo $comments?></strong></p>
-    <p>We will contact you at <strong><?php echo $email, $error_email ?></strong> if we have any relevant news.</p>";
+    <p>We will contact you at <strong><?php echo $email, $error_email ?></strong> if we have any relevant news.</p>
 
 
 </main>
