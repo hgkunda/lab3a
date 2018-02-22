@@ -10,30 +10,33 @@
 
 <?php #Script 1.1 - report.php
 
-    $first_name = filter_input(INPUT_POST, 'first_name');
-    $last_name = filter_input(INPUT_POST, 'last_name');
-    $email = filter_input(INPUT_POST,'email', FILTER_VALIDATE_EMAIL);
-    $when_happen = $_POST['when_happen'];
-    $how_many = $_POST['how_many'];
-    $how_long = $_POST['how_long'];
-    $describe = $_POST['describe'];
-    $what_do = $_POST['what_do'];
-    $seen_fluffy = filter_input(INPUT_POST, 'seen_fluffy');
-    $comments = $_POST['comments'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+  if ($isset($_POST['first_name'],  $_POST['last_name'], $_POST['email'], $_POST['seen_fluffy'])) {
 
- if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      $first_name = filter_input(INPUT_POST, 'first_name');
+      $last_name = filter_input(INPUT_POST, 'last_name');
+      $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+      $when_happen = $_POST['when_happen'];
+      $how_many = $_POST['how_many'];
+      $how_long = $_POST['how_long'];
+      $describe = $_POST['describe'];
+      $what_do = $_POST['what_do'];
+      $seen_fluffy = filter_input(INPUT_POST, 'seen_fluffy');
+      $comments = $_POST['comments'];
 
-    if (!$first_name == ' ') {
+  }
+
+    else if (!$first_name == ' ') {
         echo "<p>ERROR! You must enter a vaild first name</p>";
 }
-    if (!$last_name) {
+    else if (!$last_name) {
         $error_lname = "ERROR! You must enter a valid last name";
 }
-    if (!$email) {
+    else if (!$email) {
         $error_email = "ERROR! You must enter a valid email address";
 }
-    if (!$seen_fluffy) {
+    else (!$seen_fluffy) {
         $error_fluffy = "ERROR! Please let us know if you have seen our dear little Fluffy (we really miss him)!";
         }
 }
