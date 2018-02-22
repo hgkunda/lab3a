@@ -1,21 +1,4 @@
-<?php
- if (!isset($error_fname)) { $error_fname = ''; }
- if (!isset($error_lname)) { $error_fname = ''; }
- if (!isset($error_email)) { $error_fname = ''; }
- if (!isset($error_fluffy) { $error_fname = ''; }
- if (!isset($first_name)) { $first_name = ''; }
- if (!isset($last_name)) { $last_name = ''; }
- if (!isset($email)) { $email = ''; }
- if (!isset($when_happen)) { $when_happen = ''; }
- if (!isset($how_long)) { $how_long = ''; }
- if (!isset($how_many)) { $how_many = ''; }
- if (!isset($describe)) { $describe = ''; }
- if (!isset($what_do)) { $what_do = ''; }
- if (!isset($seen_fluffy)) { $seen_fluffy = ''; }
- if (!isset($comments)) { $comments = ''; }
 
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,9 +53,27 @@
 
 
 <form method="post" action="report.php">
-
+  <?php require (lab3a/report.php) ?>
     <h2>Aliens Abducted Me - Report an Abduction</h2>
+    <?php
 
+     if (!isset($error_fname)) { $error_fname = ''; }
+     if (!isset($error_lname)) { $error_fname = ''; }
+     if (!isset($error_email)) { $error_fname = ''; }
+     if (!isset($error_fluffy) { $error_fname = ''; }
+     if (!isset($first_name)) { $first_name = ''; }
+     if (!isset($last_name)) { $last_name = ''; }
+     if (!isset($email)) { $email = ''; }
+     if (!isset($when_happen)) { $when_happen = ''; }
+     if (!isset($how_long)) { $how_long = ''; }
+     if (!isset($how_many)) { $how_many = ''; }
+     if (!isset($describe)) { $describe = ''; }
+     if (!isset($what_do)) { $what_do = ''; }
+     if (!isset($seen_fluffy)) { $seen_fluffy = ''; }
+     if (!isset($comments)) { $comments = ''; }
+
+
+    ?>
 
     <h3>Share your story of alien abduction:</h3>
 
@@ -114,8 +115,8 @@
     <div>
 
         <label for="seen_fluffy" id="seen_fluffy">*Have you seen my dog Fluffy?</label>
-        <input type="radio" name="seen_fluffy" value="yes" <?php if($seen_fluffy == "yes") echo "checked"; ?>>Yes
-        <input type="radio" name="seen_fluffy" value="no" <?php if($seen_fluffy == "no") echo "checked"; ?>>No
+        <input type="radio" name="seen_fluffy" value="yes" <?php if($seen_fluffy == "yes") echo "checked"; ?>>Yes<br>
+        <input type="radio" name="seen_fluffy" value="no" <?php if($seen_fluffy == "no") echo "checked"; ?>>No<br>
         <?php print $error_fluffy ?>
 
     </div>
@@ -139,7 +140,7 @@
 
 
 </form>
-
+<!-- <?php require 'report.php'; ?> -->
 </body>
 
 </html>
