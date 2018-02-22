@@ -61,27 +61,27 @@
 
 
     <label for="last_name">*Last Name:</label>
-    <input type="text" name="last_name" id="last_name" size="20" value="<?php echo $last_name; ?>">
+    <input type="text" name="last_name" id="last_name" placeholder="last name" size="20" value="<?php echo $last_name; ?>">
 
 
     <label for="email">*What is your email address?</label>
-    <input type="email" name="email" id="email" size="20"value="<?php echo $email; ?>">
+    <input type="email" name="email" id="email" size="20" placeholder="email address" value="<?php echo $email; ?>">
 
 
     <label for="when_happen">When did it happen?</label>
-    <input type="date" name="when_happen" id="when_happen" size="20" value="<?php echo $when_happen; ?>">
+    <input type="date" name="when_happen" id="when_happen" size="20" plvalue="<?php echo $when_happen; ?>">
 
 
     <label for="how_long">How long were you gone?</label>
-    <input type="text" name="how_long" id="how_long" value="hours, days, years?" size="20">
+    <input type="text" name="how_long" id="how_long" placeholder="hours, days, years?" <?php if (isset($_POST['how_long'])) echo $_POST['how_long'] size="20">
 
 
     <label for="how_many">How many did you see?</label>
-    <input type="number" name="how_many" id="how_many" value="Enter a number" size="20">
+    <input type="number" name="how_many" id="how_many" placeholder="Enter a number" size="20">
 
 
     <label for="describe">Describe them:</label>
-    <input type="text" name="describe" id="describe" value="what did they look like?" size="30">
+    <input type="text" name="describe" id="describe" placeholder="what did they look like?" size="30">
 
 
     <label for="what_do">What did they do to you?</label>
@@ -104,13 +104,13 @@
     <br>
 
     <p class="bottom_align"><label for="comments" class="label_align">Anything else you want to add?</label>
-        <textarea name="comments" id="comments" value="Your comments..." drows="5" cols="20"></textarea></p>
+        <textarea name="comments" id="comments" placeholder="Your comments..." rows="5" cols="20"></textarea></p>
 
     <br>
     <p>*Required Fields</p>
     <br>
 
-    <input type="submit" id="submit" value=" Report Abduction ">
+    <input type="submit" id="submit" value="Report Abduction ">
 
 
 
