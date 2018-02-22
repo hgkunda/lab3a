@@ -12,7 +12,7 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-  if ($isset($_POST['first_name'],  $_POST['last_name'], $_POST['email'], $_POST['seen_fluffy'])) {
+  if (isset($_POST['first_name'],  $_POST['last_name'], $_POST['email'], $_POST['seen_fluffy'])) {
 
       $first_name = filter_input(INPUT_POST, 'first_name');
       $last_name = filter_input(INPUT_POST, 'last_name');
@@ -25,25 +25,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $seen_fluffy = filter_input(INPUT_POST, 'seen_fluffy');
       $comments = $_POST['comments'];
 
+      echo "<p>Thanks for submitting the form <strong> $first_name $error_fname</strong>  <strong>$last_name $error_lname </strong>.</p><p>You were abducted on <strong> $when_happen </strong> and gone for <strong> $how_long </strong>.</p><p>You said there were <strong> $how_many </strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong> $describe </strong>.</p><p>Did you see Fluffy? You answered: <strong> $seen_fluffy $error_fluffy </strong></p><p>Your other comments were: <strong> $comments </strong></p><p>We will contact you at <strong> $email $error_email </strong> if we have any relevant news.</p>";
+
   }
 
-    else if (!$first_name == ' ') {
-        echo "<p>ERROR! You must enter a vaild first name</p>";
+  if (!$first_name == NULL) {
+         $error_fname = "ERROR! You must enter a vaild first name";
 }
-    else if (!$last_name) {
+    if (!$last_name == NULL) {
         $error_lname = "ERROR! You must enter a valid last name";
 }
-    else if (!$email) {
+    if (!$email == NULL) {
         $error_email = "ERROR! You must enter a valid email address";
 }
-    else (!$seen_fluffy) {
+    if (!$seen_fluffy == NULL) {
         $error_fluffy = "ERROR! Please let us know if you have seen our dear little Fluffy (we really miss him)!";
         }
-}
-
-else {
-
-         echo "<p>Thanks for submitting the form <strong> $first_name $error_fname</strong>  <strong>$last_name $error_lname </strong>.</p><p>You were abducted on <strong> $when_happen </strong> and gone for <strong> $how_long </strong>.</p><p>You said there were <strong> $how_many </strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong> $describe </strong>.</p><p>Did you see Fluffy? You answered: <strong> $seen_fluffy $error_fluffy </strong></p><p>Your other comments were: <strong> $comments </strong></p><p>We will contact you at <strong> $email $error_email </strong> if we have any relevant news.</p>";
 
 }
 ?>

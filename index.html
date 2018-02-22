@@ -1,3 +1,22 @@
+<?php
+ if (!isset($error_fname)) { $error_fname = ''; }
+ if (!isset($error_lname)) { $error_fname = ''; }
+ if (!isset($error_email)) { $error_fname = ''; }
+ if (!isset($error_fluffy) { $error_fname = ''; }
+ if (!isset($first_name)) { $first_name = ''; }
+ if (!isset($last_name)) { $last_name = ''; }
+ if (!isset($email)) { $email = ''; }
+ if (!isset($when_happen)) { $when_happen = ''; }
+ if (!isset($how_long)) { $how_long = ''; }
+ if (!isset($how_many)) { $how_many = ''; }
+ if (!isset($describe)) { $describe = ''; }
+ if (!isset($what_do)) { $what_do = ''; }
+ if (!isset($seen_fluffy)) { $seen_fluffy = ''; }
+ if (!isset($comments)) { $comments = ''; }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,14 +78,17 @@
 
     <label for="first_name">*First Name:</label>
     <input type="text" name="first_name" id="first_name" size="20"  placeholder="first name">
+    <?php print $error_fname ?>
 
 
     <label for="last_name">*Last Name:</label>
     <input type="text" name="last_name" id="last_name" placeholder="last name" size="20">
+    <?php print $error_lname ?>
 
 
     <label for="email">*What is your email address?</label>
     <input type="text" name="email" id="email" size="20" placeholder="email address">
+    <?php print $error_email ?>
 
 
     <label for="when_happen">When did it happen?</label>
@@ -94,6 +116,7 @@
         <label for="seen_fluffy" id="seen_fluffy">*Have you seen my dog Fluffy?</label>
         <input type="radio" name="seen_fluffy" value="yes">Yes
         <input type="radio" name="seen_fluffy" value="no">No
+        <?php print $error_fluffy ?>
 
     </div>
 
