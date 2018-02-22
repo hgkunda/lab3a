@@ -57,23 +57,23 @@
     <h3>Share your story of alien abduction:</h3>
 
     <label for="first_name">*First Name:</label>
-    <input type="text" name="first_name" id="first_name" size="20" value="<?php echo $first_name; ?>">
+    <input type="text" name="first_name" id="first_name" size="20" placeholder="first name">
 
 
     <label for="last_name">*Last Name:</label>
-    <input type="text" name="last_name" id="last_name" placeholder="last name" size="20" value="<?php echo $last_name; ?>">
+    <input type="text" name="last_name" id="last_name" placeholder="last name" size="20">
 
 
     <label for="email">*What is your email address?</label>
-    <input type="email" name="email" id="email" size="20" placeholder="email address" value="<?php echo $email; ?>">
+    <input type="text" name="email" id="email" size="20" placeholder="email address" value="<?php echo $email; ?>">
 
 
     <label for="when_happen">When did it happen?</label>
-    <input type="date" name="when_happen" id="when_happen" size="20" plvalue="<?php echo $when_happen; ?>">
+    <input type="date" name="when_happen" id="when_happen" size="20" placeholder=""value="<?php echo $when_happen; ?>">
 
 
     <label for="how_long">How long were you gone?</label>
-    <input type="text" name="how_long" id="how_long" placeholder="hours, days, years?" <?php if (isset($_POST['how_long'])) echo $_POST['how_long'] size="20">
+    <input type="text" name="how_long" id="how_long" placeholder="hours, days, years?" size="20" value="<?php if (isset($_POST['how_long'])) echo $_POST['how_long']>">
 
 
     <label for="how_many">How many did you see?</label>
@@ -85,7 +85,7 @@
 
 
     <label for="what_do">What did they do to you?</label>
-    <input type="text" name="what_do" id="what_do" value="describe what they did" size="30">
+    <input type="text" name="what_do" id="what_do" placeholder="describe what they did" size="30">
     <br>
 
     <div>
