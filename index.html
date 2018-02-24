@@ -53,7 +53,7 @@
 
 
 <form method="post" action="report.php">
-  <?php require (lab3a/report.php) ?>
+  <?php require (lab3a/report.php); ?>
     <h2>Aliens Abducted Me - Report an Abduction</h2>
     <?php
 
@@ -115,8 +115,8 @@
     <div>
 
         <label for="seen_fluffy" id="seen_fluffy">*Have you seen my dog Fluffy?</label>
-        <input type="radio" name="seen_fluffy" value="yes" <?php if($seen_fluffy == "yes") echo "checked"; ?>>Yes<br>
-        <input type="radio" name="seen_fluffy" value="no" <?php if($seen_fluffy == "no") echo "checked"; ?>>No<br>
+        <input type="radio" name="seen_fluffy" value="yes" <?php if($seen_fluffy == "yes") echo "checked"; ?>>Yes
+        <input type="radio" name="seen_fluffy" value="no" <?php if($seen_fluffy == "no") echo "checked"; ?>>No
         <?php print $error_fluffy ?>
 
     </div>
