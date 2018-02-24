@@ -60,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
  }
 
 ?>
+<form>
 
   <label for="first_name">*First Name:</label>
   <input type="text" name="first_name" id="first_name" size="20"  placeholder="first name" value="<?php print $first_name; ?>">
@@ -99,8 +100,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <div>
 
       <label for="seen_fluffy" id="seen_fluffy">*Have you seen my dog Fluffy?</label>
-      <input type="radio" name="seen_fluffy" value="yes" <?php if($seen_fluffy == "yes") echo "checked"; ?>>Yes
-      <input type="radio" name="seen_fluffy" value="no" <?php if($seen_fluffy == "no") echo "checked"; ?>>No
+      <input type="radio" name="seen_fluffy" value="<?php if($seen_fluffy == "yes") echo "checked"; ?>">Yes
+      <input type="radio" name="seen_fluffy" value="<?php if($seen_fluffy == "no") echo "checked"; ?>">No
       <?php print $error_fluffy ?>
 
   </div>
@@ -121,6 +122,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   <input type="submit" id="submit" value="Report Abduction ">
 </form>
+
+
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
