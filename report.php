@@ -3,6 +3,7 @@
 <head>
     <title>Aliens Abducted Me - Report an Abduction</title>
     <meta charset = "utf-8">
+
 </head>
 <body>
 
@@ -39,14 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_fluffy = "ERROR! Please let us know if you have seen our dear little Fluffy (we really miss him)!";
         }
 
-}
-
-  echo "<h2>Aliens Abducted Me - Report an Abduction</h2>"
+//I found the typos with the errors all having {error_fname} instead of the matching error name. Also caught the missing parentheses.
 
    if (!isset($error_fname)) { $error_fname = ''; }
-   if (!isset($error_lname)) { $error_fname = ''; }
-   if (!isset($error_email)) { $error_fname = ''; }
-   if (!isset($error_fluffy) { $error_fname = ''; }
+   if (!isset($error_lname)) { $error_lname = ''; }
+   if (!isset($error_email)) { $error_email = ''; }
+   if (!isset($error_fluffy)) { $error_fluffy = ''; }
    if (!isset($first_name)) { $first_name = ''; }
    if (!isset($last_name)) { $last_name = ''; }
    if (!isset($email)) { $email = ''; }
@@ -58,12 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    if (!isset($seen_fluffy)) { $seen_fluffy = ''; }
    if (!isset($comments)) { $comments = ''; }
 
+ }
+
 ?>
-  <h3>Share your story of alien abduction:</h3>
 
   <label for="first_name">*First Name:</label>
   <input type="text" name="first_name" id="first_name" size="20"  placeholder="first name" value="<?php print $first_name; ?>">
-  <?php print $error_fname ?>
+  <?php print $error_fname; ?>
 
 
   <label for="last_name">*Last Name:</label>
@@ -120,28 +120,46 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <br>
 
   <input type="submit" id="submit" value="Report Abduction ">
-
-<?SplMinHeap  echo "<p>Thanks for submitting the form <strong> $first_name $error_fname</strong>  <strong>$last_name $error_lname </strong>.</p><p>You were abducted on <strong> $when_happen </strong> and gone for <strong> $how_long </strong>.</p><p>You said there were <strong> $how_many </strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong> $describe </strong>.</p><p>Did you see Fluffy? You answered: <strong> $seen_fluffy $error_fluffy </strong></p><p>Your other comments were: <strong> $comments </strong></p><p>We will contact you at <strong> $email $error_email </strong> if we have any relevant news.</p>";
-
-}
-?>
 </form>
-  <!-- if (!$first_name == NULL) {
-         $error_fname = "ERROR! You must enter a vaild first name";
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+if (isset($_POST['first_name'],  $_POST['last_name'], $_POST['email'], $_POST['seen_fluffy'])) {
+
+    $first_name = filter_input(INPUT_POST, 'first_name');
+    $last_name = filter_input(INPUT_POST, 'last_name');
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $when_happen = $_POST['when_happen'];
+    $how_many = $_POST['how_many'];
+    $how_long = $_POST['how_long'];
+    $describe = $_POST['describe'];
+    $what_do = $_POST['what_do'];
+    $seen_fluffy = filter_input(INPUT_POST, 'seen_fluffy');
+    $comments = $_POST['comments'];
+
+
+    if (!$first_name == NULL) {
+       $error_fname = "ERROR! You must enter a vaild first name";
 }
-    if (!$last_name == NULL) {
-        $error_lname = "ERROR! You must enter a valid last name";
+  if (!$last_name == NULL) {
+      $error_lname = "ERROR! You must enter a valid last name";
 }
-    if (!$email == NULL) {
-        $error_email = "ERROR! You must enter a valid email address";
+  if (!$email == NULL) {
+      $error_email = "ERROR! You must enter a valid email address";
 }
-    if (!$seen_fluffy == NULL) {
-        $error_fluffy = "ERROR! Please let us know if you have seen our dear little Fluffy (we really miss him)!";
-        }
+  if (!$seen_fluffy == NULL) {
+      $error_fluffy = "ERROR! Please let us know if you have seen our dear little Fluffy (we really miss him)!";
+      }
 
 }
 
-?> -->
+else {
+
+echo "<p>Thanks for submitting the form <strong> $first_name $error_fname</strong>  <strong>$last_name $error_lname </strong>.</p><p>You were abducted on <strong> $when_happen </strong> and gone for <strong> $how_long </strong>.</p><p>You said there were <strong> $how_many </strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong> $describe </strong>.</p><p>Did you see Fluffy? You answered: <strong> $seen_fluffy $error_fluffy </strong></p><p>Your other comments were: <strong> $comments </strong></p><p>We will contact you at <strong> $email $error_email </strong> if we have any relevant news.</p>";
+}
+
+?>
+
 
 </body>
 </html>
