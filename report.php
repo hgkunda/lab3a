@@ -140,25 +140,23 @@ if (isset($_POST['first_name'],  $_POST['last_name'], $_POST['email'], $_POST['s
     $seen_fluffy = filter_input(INPUT_POST, 'seen_fluffy');
     $comments = $_POST['comments'];
 
+}
 
     if (!$first_name == NULL) {
-       $error_fname = "ERROR! You must enter a vaild first name";
-}
-  if (!$last_name == NULL) {
-      $error_lname = "ERROR! You must enter a valid last name";
-}
-  if (!$email == NULL) {
-      $error_email = "ERROR! You must enter a valid email address";
-}
-  if (!$seen_fluffy == NULL) {
-      $error_fluffy = "ERROR! Please let us know if you have seen our dear little Fluffy (we really miss him)!";
-      }
+        $error_fname = "ERROR! You must enter a vaild first name";
+    }
+    if (!$last_name == NULL) {
+        $error_lname = "ERROR! You must enter a valid last name";
+    }
+    if (!$email == NULL) {
+        $error_email = "ERROR! You must enter a valid email address";
+    }
+    if (!$seen_fluffy == NULL) {
+        $error_fluffy = "ERROR! Please let us know if you have seen our dear little Fluffy (we really miss him)!";
+    } else {
 
-}
-
-else {
-
-echo "<p>Thanks for submitting the form <strong> $first_name $error_fname</strong>  <strong>$last_name $error_lname </strong>.</p><p>You were abducted on <strong> $when_happen </strong> and gone for <strong> $how_long </strong>.</p><p>You said there were <strong> $how_many </strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong> $describe </strong>.</p><p>Did you see Fluffy? You answered: <strong> $seen_fluffy $error_fluffy </strong></p><p>Your other comments were: <strong> $comments </strong></p><p>We will contact you at <strong> $email $error_email </strong> if we have any relevant news.</p>";
+        echo "<p>Thanks for submitting the form <strong> $first_name $error_fname</strong>  <strong>$last_name $error_lname </strong>.</p><p>You were abducted on <strong> $when_happen </strong> and gone for <strong> $how_long </strong>.</p><p>You said there were <strong> $how_many </strong> of them.</p><p>And they <strong>$what_do</strong>.</p><p>You described them as <strong> $describe </strong>.</p><p>Did you see Fluffy? You answered: <strong> $seen_fluffy $error_fluffy </strong></p><p>Your other comments were: <strong> $comments </strong></p><p>We will contact you at <strong> $email $error_email </strong> if we have any relevant news.</p>";
+    }
 }
 
 ?>
